@@ -1,0 +1,64 @@
+body {
+    margin: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 100px;
+    animation: slide-in 3s forwards;
+    animation-duration: 3s;
+    animation-name: slide-in;
+    animation-iteration-count: 1; /* Run only once */
+    animation-fill-mode: forwards; /* Keep the final state after the animation */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(150vw) scale(200%, 1); /* Start off-screen and scaled */
+  }
+
+  to {
+    transform: translateX(0) scale(100%, 1); /* End at normal position and scale */
+  }
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #f2e8cf;
+    color: #2b2839;
+    border-bottom: 6px solid #bc4749;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+.card-name {
+    background: #a7c957;
+    color: #386641;
+    margin: 0px 40px;
+    border: 1px solid #386641;
+    border-radius: 20px;
+}
+
+.border-blue {
+    border: 1px dotted blue;
+}
+
+.card-name:hover {
+    box-shadow: 0 10px 20px rgba(167, 201, 87, 0.6); /* Add a soft shadow with the color of .card-name */
+}
+
+.avatar:hover {
+    box-shadow: 0 10px 20px rgba(167, 201, 87, 0.6); /* Add a soft shadow with the color of .card-name */
+}
